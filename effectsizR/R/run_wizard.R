@@ -38,7 +38,7 @@ if (question3 == 'YES'){winDialog("ok", "We recommend to calculate the bias-corr
   question8 <- 0
   question9 <- 0
  run_hedges_g()
-} else if (question3 == 'NO'){winDialog("ok", "We recommend to calculate the effect size estimate Cohen's d for your group comparison. The calculation will be run automatically, however, you may also use the function hedges_g().")
+} else if (question3 == 'NO'){winDialog("ok", "We recommend to calculate the effect size estimate Cohen's d for your group comparison. The calculation will be run automatically, however, you may also use the function cohens_d().")
   rm(list=ls())
   question3 <- 0
   question4 <- 0
