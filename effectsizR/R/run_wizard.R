@@ -28,7 +28,7 @@ if (question2 == 'YES'){question3 <- winDialog("yesno", "Is your total sample si
 } else if (question2 == 'NO'){question4 <- winDialog("yesno", "Do you want to calculate an effect size estimate for a Wilcoxon rank-sum or signed-rank test?")
 question3 <- 2
 }
-if (question3 == 'YES'){winDialog("ok", "We recommend to calculate the bias-corrected effect size estimate Cohen's d to avoid upward bias due to a very small sample size. The calculation will be run automatically, however, you may also use the function cohens_d().")
+if (question3 == 'YES'){winDialog("ok", "We recommend to calculate the bias-corrected effect size estimate Hedge's g to avoid upward bias due to a very small sample size. The calculation will be run automatically, however, you may also use the function cohens_d().")
   rm(list=ls())
   question3 <- 0
   question4 <- 0
@@ -37,8 +37,8 @@ if (question3 == 'YES'){winDialog("ok", "We recommend to calculate the bias-corr
   question7 <- 0
   question8 <- 0
   question9 <- 0
- run_cohens_d()
-} else if (question3 == 'NO'){winDialog("ok", "We recommend to calculate the effect size estimate Hedge's g for your group comparison. The calculation will be run automatically, however, you may also use the function hedges_g().")
+ run_hedges_g()
+} else if (question3 == 'NO'){winDialog("ok", "We recommend to calculate the effect size estimate Cohen's d for your group comparison. The calculation will be run automatically, however, you may also use the function hedges_g().")
   rm(list=ls())
   question3 <- 0
   question4 <- 0
@@ -47,7 +47,7 @@ if (question3 == 'YES'){winDialog("ok", "We recommend to calculate the bias-corr
   question7 <- 0
   question8 <- 0
   question9 <- 0
-  run_hedges_d()
+  run_cohens_d()
 }else if (question3 == 2){
 }
 if (question4 == 'YES'){winDialog("ok", "We recommed to calculate the effect size estimate r as a conversion of the z-value which resulted from the Wilcoxon test. The according function is wilcox_r().")
